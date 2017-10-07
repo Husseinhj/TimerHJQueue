@@ -1,4 +1,4 @@
-# TimerHJQueue ![travis](https://travis-ci.org/Husseinhj/TimerHJQueue.svg?branch=master)
+# TimerHJQueue ![travis](https://travis-ci.org/Husseinhj/TimerHJQueue.svg?branch=master) ![yamel](https://img.shields.io/cocoapods/p/HJQueue.svg?style=flat)
 This is a simple queue with Infinite or limit length and also dequeue periodic with timer for iOS platforms Edit Add topics
 
 ## Usage
