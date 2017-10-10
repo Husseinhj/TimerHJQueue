@@ -3,12 +3,14 @@ Pod::Spec.new do |s|
   s.name         = "HJQueue"
   s.version      = "1.0.1"
   s.summary      = "This is a simple queue with Infinite or limit length and also dequeue periodic with timer for iOS platforms Edit Add topics"
-
+  s.requires_arc = true
+  s.default_subspec = 'standard'
   # s.description  = <<-DESC
 
   s.homepage     = "https://github.com/Husseinhj/TimerHJQueue"
-  # s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license =    { :type => 'proprietary', :text => <<-LICENSE
+     Copyright 2017 - Hussein.Juybari
+  }
 
   s.author             = { "Hussein Habibi Juybari" => "hussein.juybari@gmail.com" }
   # Or just: s.author    = "Hussein Habibi Juybari"
