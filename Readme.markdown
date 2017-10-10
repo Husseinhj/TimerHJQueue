@@ -31,7 +31,7 @@ interval is per second.
 ## Installation
 ----------
 Add the following to your `Podfile`:
-Install from [CocoaPod.](https://cocoapods.org/?q=HJqueue)
+Install from [CocoaPod.](https://cocoapods.org/?q=TimerHJQueue)
 ``` ruby
     pod 'TimerHJQueue', '~> 1.0.1'
 ```
