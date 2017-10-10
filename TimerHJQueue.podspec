@@ -8,9 +8,7 @@ Pod::Spec.new do |s|
   # s.description  = <<-DESC
 
   s.homepage     = "https://github.com/Husseinhj/TimerHJQueue"
-  s.license =    { :type => 'proprietary', :text => <<-LICENSE
-     Copyright 2017 - Hussein.Juybari
-  }
+  s.license = 'MIT'
 
   s.author             = { "Hussein Habibi Juybari" => "hussein.juybari@gmail.com" }
   # Or just: s.author    = "Hussein Habibi Juybari"
