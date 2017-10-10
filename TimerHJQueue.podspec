@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   # s.social_media_url   = "http://twitter.com/Hussein Habibi Juybari"
 
 # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '1.0' }
- s.source                = { :git => "https://github.com/Husseinhj/TimerHJQueue.git", :tag => "v1.0.0" }
+ s.source                = { :git => "https://github.com/Husseinhj/TimerHJQueue.git", :tag => "v1.0.1" }
   s.source_files          = 'TimerHJQueue/HJQueue.h'
   s.platform              = :ios
   s.ios.deployment_target = '6.0'
