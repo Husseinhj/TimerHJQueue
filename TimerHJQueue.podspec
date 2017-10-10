@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "HJQueue"
+  s.name         = "TimerHJQueue"
   s.version      = "1.0.1"
   s.summary      = "This is a simple queue with Infinite or limit length and also dequeue periodic with timer for iOS platforms Edit Add topics"
   s.requires_arc = true
