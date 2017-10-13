@@ -20,11 +20,27 @@ interval is per second.
 ```objc
 [queue setQueueTimeInterval:60];
 ```
+**Dequeue count:**
+dequeue periodic with arrayOfObjects with set dequeueCount :
+``` objc
+_queue.dequeueCount = 10;
+```
 **delegate :** 
+dequeue just single object :
 ```objc
 -(void) dequeueWithTick:(id)object{
     NSLog([NSString stringWithFormat:@"Dequeue periodic ('%.01f') with value : %@ \n",
            [queue queueTimeInterval],object]);
+}
+```
+dequeue arrayOfObjects with set dequeueCount :
+```objc
+-(void) dequeueArrayWithTick:(NSArray<id> *)objects{
+    NSString *message = @"";
+    for (id object in objects) {
+        message = [message stringByAppendingString:[NSString stringWithFormat:@"%@ \n",object]];
+    }
+    NSLog([NSString stringWithFormat:@"%@ Dequeue periodic ('%.01f') with value : %@ \n",_logTextView.text,[_queue queueTimeInterval],message]);
 }
 ```
 
@@ -33,6 +49,6 @@ interval is per second.
 Add the following to your `Podfile`:
 Install from [CocoaPod.](https://cocoapods.org/?q=TimerHJQueue)
 ``` ruby
-    pod 'TimerHJQueue', '~> 1.0.1'
+    pod 'TimerHJQueue', '~> 1.0.2'
 ```
 Then run `pod install`.
