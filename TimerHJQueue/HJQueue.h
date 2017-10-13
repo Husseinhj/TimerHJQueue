@@ -12,11 +12,23 @@
 
 /**
  * Invoked when enqueue:object called and queueTimeInterval was set, Invoked priodic until queue was empty.
+ *
  * @author Hussein.Juybari
  *
  * @param object is you value in queue.
  */
 -(void) dequeueWithTick:(id) object;
+
+/**
+ * dequeueArrayWithTick:objects
+ *
+ * Invoked when enqueue:object called and queueTimeInterval was set and also set dequeueCount, Invoked priodic arrayOfObjects until queue was empty.
+ *
+ * @author Hussein.Juybari
+ *
+ * @param objects is you value in queue.
+ */
+-(void) dequeueArrayWithTick:(NSArray<id> *) objects;
 
 @end
 
@@ -50,6 +62,16 @@
  *
  */
 @property (nonatomic) NSTimeInterval queueTimeInterval;
+
+/**
+ * dequeueCount
+ *
+ * Dequeue array of objects. For example : you want dequeue 10 objects for each calling dequeue.
+ *
+ * @author Hussein.Juybari
+ *
+ */
+@property (nonatomic) NSInteger dequeueCount;
 
 /**
  * Delegate for invoke dequeueWithTick:object.

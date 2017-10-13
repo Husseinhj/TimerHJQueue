@@ -93,17 +93,36 @@
 }
 
 -(id) dequeue{
+    return [self dequeue:1];
+}
+
+-(NSArray<id> *) dequeue:(NSInteger) count{
     if([self isEmpty]){
         NSLog(@"### HJQueue log : queue is Empty :-( ###");
         return nil;
     }
     else
     {
-        if ([_queueArray count] > 0)
-        {
-            id object = [_queueArray firstObject];
-            [_queueArray removeObjectAtIndex:0];
-            return object;
+        NSInteger countOfDequeue = _queueArray.count;
+        if (countOfDequeue > 0) {
+            if (countOfDequeue > count){
+                countOfDequeue = count;
+            }
+            
+            NSMutableArray *arrayOfObjects = [[NSMutableArray alloc] init];
+            for (NSInteger i = 0; i < countOfDequeue; i ++) {
+                if (_queueArray.count > i) {
+                    [arrayOfObjects addObject:_queueArray[i]];
+                } else {
+                    break;
+                }
+            }
+            
+            for (NSInteger i = countOfDequeue-1; i >= 0; i --) {
+                [_queueArray removeObjectAtIndex:i];
+            }
+            
+            return arrayOfObjects;
         }
         NSLog(@"### HJQueue log : queue is Empty :-( ###");
         return nil;
@@ -135,10 +154,18 @@
         return;
     }
     
-    if (_delegate && [_delegate respondsToSelector:@selector(dequeueWithTick:)]) {
-        [_delegate dequeueWithTick:[self dequeue]];
+    if (_dequeueCount == 0) {
+        if (_delegate && [_delegate respondsToSelector:@selector(dequeueWithTick:)]) {
+            [_delegate dequeueWithTick:[self dequeue]];
+        } else {
+            NSLog(@"### HJQueue log : dequeueWithTick delegate was not implement by You :-( ###");
+        }
     } else {
-        NSLog(@"### HJQueue log : dequeueWithTick delegate was not implement by You :-( ###");
+        if (_delegate && [_delegate respondsToSelector:@selector(dequeueArrayWithTick:)]) {
+            [_delegate dequeueArrayWithTick:[self dequeue:_dequeueCount]];
+        } else {
+            NSLog(@"### HJQueue log : dequeueWithTick delegate was not implement by You :-( ###");
+        }
     }
 }
 
