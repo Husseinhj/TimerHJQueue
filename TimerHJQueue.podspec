@@ -20,7 +20,5 @@ Pod::Spec.new do |s|
   s.source_files          = 'TimerHJQueue/HJQueue.h'
   s.platform              = :ios
   s.ios.deployment_target = '6.0'
-  s.requires_arc          = true
-
 
 end
