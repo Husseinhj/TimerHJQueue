@@ -1,4 +1,4 @@
-# TimerHJQueue ![build](https://travis-ci.org/Husseinhj/TimerHJQueue.svg?branch=master) ![pod](https://img.shields.io/cocoapods/p/TimerHJQueue.svg?style=flat) ![version](https://img.shields.io/cocoapods/v/TimerHJQueue.svg?style=flat) ![li](https://img.shields.io/cocoapods/l/TimerHJQueue.svg?style=flat)
+# TimerHJQueue ![build](https://travis-ci.org/Husseinhj/TimerHJQueue.svg?branch=master) ![pod](https://img.shields.io/cocoapods/p/TimerHJQueue.svg?style=flat) ![version](https://img.shields.io/cocoapods/v/TimerHJQueue.svg?style=flat) ![li](https://img.shields.io/cocoapods/l/TimerHJQueue.svg?style=flat) ![CocoaPods](https://img.shields.io/cocoapods/dt/TimerHJQueue.svg) ![CocoaPods](https://img.shields.io/cocoapods/at/TimerHJQueue.svg)
 This is a simple queue with Infinite or limit length and also dequeue periodic with timer for iOS platforms Edit Add topics
 
 ## Usage
