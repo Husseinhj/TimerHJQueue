@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
   s.author             = { "Hussein Habibi Juybari" => "hussein.juybari@gmail.com" }
   # Or just: s.author    = "Hussein Habibi Juybari"
   # s.authors            = { "Hussein Habibi Juybari" => "hussein.juybari@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/Hussein Habibi Juybari"
+  s.social_media_url   = "http://twitter.com/Hussein Habibi Juybari"
 
 # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '1.0' }
  s.source                = { :git => "https://github.com/Husseinhj/TimerHJQueue.git", :tag => "v#{s.version}" }
-  s.source_files          = 'TimerHJQueue/TimerHJQueue.h'
+  s.source_files          = 'TimerHJQueue'
   s.platform              = :ios
   s.ios.deployment_target = '6.0'
 
